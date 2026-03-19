@@ -1,0 +1,11 @@
+export struct Token {
+	kind: string
+	line: number
+	col: number
+	valueText: string?
+	valueNumber: number?
+	valueBoolean: boolean?
+}
+
+export type TokenList = array<Token>
+export function tokenize(input: string, sourcePath: string?) -> TokenList
